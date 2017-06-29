@@ -9,7 +9,7 @@ RUN apk update \
 
 COPY join_serf.sh /usr/local/bin/
 COPY dummy.sh /usr/local/bin/
-COPY docker_entrypoint.sh /usr/local/bin/
+COPY docker-entrypoint.sh /usr/local/bin/
 
-ENTRYPOINT ["docker_entrypoint.sh"]
+ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["dummy.sh"]
