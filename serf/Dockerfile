@@ -8,6 +8,8 @@ RUN apk update \
   && rm /var/cache/apk/*.tar.gz /tmp/serf.zip 
 
 COPY join_serf.sh /usr/local/bin/
-COPY start.sh /usr/local/bin/
+COPY dummy.sh /usr/local/bin/
+COPY docker_entrypoint.sh /usr/local/bin/
 
-ENTRYPOINT ["start.sh"]
+ENTRYPOINT ["docker_entrypoint.sh"]
+CMD ["dummy.sh"]
